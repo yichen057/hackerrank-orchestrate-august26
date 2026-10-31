@@ -1,0 +1,2748 @@
+{
+  "artifact_metadata": {
+    "configuration": "original-v3-retrieval-diagnostic",
+    "prompt_version": "routing-v3-untrusted-compressed-examples"
+  },
+  "samples": [
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 141,
+            "created_at": "2026-03-11 12:08",
+            "earlier": true,
+            "eligible_rank": 8,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Admin update: tank cleaning starts 4 PM. B/C may miss evening water if valve work slips, pls store now. Will msg once plumber closes line.",
+            "message_id": "message_0001",
+            "same_entity": true,
+            "same_type": true,
+            "score": 138.6154,
+            "text_jaccard": 0.1538
+          },
+          "message_id": "message_0001",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1538, age_days=141, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0001"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 141,
+            "created_at": "2026-03-11 12:08",
+            "earlier": true,
+            "eligible_rank": 8,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Admin update: tank cleaning starts 4 PM. B/C may miss evening water if valve work slips, pls store now. Will msg once plumber closes line.",
+            "message_id": "message_0001",
+            "same_entity": true,
+            "same_type": true,
+            "score": 138.6154,
+            "text_jaccard": 0.1538
+          },
+          "message_id": "message_0001",
+          "outranked_by": [
+            {
+              "message_id": "message_0271",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0462, age_days=27, events=dismissed,muted_after_message,reported",
+              "score": 156.3846
+            },
+            {
+              "message_id": "message_0030",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0290, age_days=56, events=dismissed,muted_after_message",
+              "score": 142.8696
+            },
+            {
+              "message_id": "message_0129",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1667, age_days=53, events=opened,replied",
+              "score": 142.0
+            },
+            {
+              "message_id": "message_0189",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1667, age_days=65, events=opened,replied",
+              "score": 141.0
+            },
+            {
+              "message_id": "message_0141",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1667, age_days=104, events=opened,replied",
+              "score": 140.0
+            },
+            {
+              "message_id": "message_0179",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1667, age_days=131, events=opened,replied",
+              "score": 139.0
+            },
+            {
+              "message_id": "message_0215",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1667, age_days=146, events=opened,replied",
+              "score": 139.0
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0001"
+      ],
+      "message_id": "sample_msg_001",
+      "top_eight_ids": [
+        "message_0271",
+        "message_0030",
+        "message_0129",
+        "message_0189",
+        "message_0141",
+        "message_0179",
+        "message_0215",
+        "message_0001"
+      ],
+      "top_ranked_id": "message_0271",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 131,
+            "created_at": "2026-03-21 17:12",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Route B leaves 7:35 today because of stadium diversion. Driver said no waiting at individual stops. Reply only if child absent.",
+            "message_id": "message_0002",
+            "same_entity": true,
+            "same_type": true,
+            "score": 140.7925,
+            "text_jaccard": 0.2264
+          },
+          "message_id": "message_0002",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2264, age_days=131, events=opened,replied"
+        },
+        {
+          "detail": {
+            "age_days": 46,
+            "created_at": "2026-06-15 12:17",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Route B bus is leaving 15 minutes early today because the main signal road is blocked.",
+            "message_id": "message_0133",
+            "same_entity": true,
+            "same_type": true,
+            "score": 143.1224,
+            "text_jaccard": 0.2041
+          },
+          "message_id": "message_0133",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2041, age_days=46, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0002",
+        "message_0133"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 131,
+            "created_at": "2026-03-21 17:12",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Route B leaves 7:35 today because of stadium diversion. Driver said no waiting at individual stops. Reply only if child absent.",
+            "message_id": "message_0002",
+            "same_entity": true,
+            "same_type": true,
+            "score": 140.7925,
+            "text_jaccard": 0.2264
+          },
+          "message_id": "message_0002",
+          "outranked_by": [
+            {
+              "message_id": "message_0133",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2041, age_days=46, events=opened,replied",
+              "score": 143.1224
+            },
+            {
+              "message_id": "message_0209",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2041, age_days=68, events=opened,replied",
+              "score": 142.1224
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0002"
+      ],
+      "message_id": "sample_msg_002",
+      "top_eight_ids": [
+        "message_0133",
+        "message_0209",
+        "message_0002",
+        "message_0255",
+        "message_0051",
+        "message_0037",
+        "message_0134",
+        "message_0210"
+      ],
+      "top_ranked_id": "message_0133",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 122,
+            "created_at": "2026-03-31 07:17",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "@u_010 can you join 4 PM prod review? Need failed-payment count + retry backlog before client mail.",
+            "message_id": "message_0003",
+            "same_entity": true,
+            "same_type": true,
+            "score": 142.6842,
+            "text_jaccard": 0.2895
+          },
+          "message_id": "message_0003",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2895, age_days=122, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0003"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 122,
+            "created_at": "2026-03-31 07:17",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "@u_010 can you join 4 PM prod review? Need failed-payment count + retry backlog before client mail.",
+            "message_id": "message_0003",
+            "same_entity": true,
+            "same_type": true,
+            "score": 142.6842,
+            "text_jaccard": 0.2895
+          },
+          "message_id": "message_0003",
+          "outranked_by": [
+            {
+              "message_id": "message_0170",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2051, age_days=51, events=opened,replied",
+              "score": 143.1538
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0003"
+      ],
+      "message_id": "sample_msg_003",
+      "top_eight_ids": [
+        "message_0170",
+        "message_0003",
+        "message_0169",
+        "message_0059",
+        "message_0060",
+        "message_0266",
+        "message_0041",
+        "message_0146"
+      ],
+      "top_ranked_id": "message_0170",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 110,
+            "created_at": "2026-04-11 17:57",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Hi Customer,\n\nYour order ending 4821 has been packed and is expected to reach the local hub today.\n\nYou can check delivery details and delivery-code instructions in your Amazon app.\n\nTeam Amazon",
+            "message_id": "message_0239",
+            "same_entity": true,
+            "same_type": true,
+            "score": 165.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0239",
+          "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=110, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0239"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 111,
+            "created_at": "2026-04-10 12:24",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Hi Customer,\n\nYour order ending 4821 has been packed and is expected to reach the local hub today.\n\nYou can check delivery details and delivery-code instructions in your Amazon app.\n\nTeam Amazon",
+            "message_id": "message_0004",
+            "same_entity": true,
+            "same_type": true,
+            "score": 165.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0004",
+          "outranked_by": [
+            {
+              "message_id": "message_0239",
+              "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=110, events=opened,replied",
+              "score": 165.0
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0004"
+      ],
+      "message_id": "sample_msg_004",
+      "top_eight_ids": [
+        "message_0239",
+        "message_0004",
+        "message_0105",
+        "message_0106",
+        "message_0028",
+        "message_0138",
+        "message_0137",
+        "message_0217"
+      ],
+      "top_ranked_id": "message_0239",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 83,
+            "created_at": "2026-05-08 17:31",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Dear Customer,\n\nYour health-related update is ready for review.\n\nPlease check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.\n\nTeam Care Services",
+            "message_id": "message_0245",
+            "same_entity": true,
+            "same_type": true,
+            "score": 166.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0245",
+          "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=83, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0245"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 101,
+            "created_at": "2026-04-20 17:31",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Dear Customer,\n\nYour health-related update is ready for review.\n\nPlease check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.\n\nTeam Care Services",
+            "message_id": "message_0005",
+            "same_entity": true,
+            "same_type": true,
+            "score": 165.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0005",
+          "outranked_by": [
+            {
+              "message_id": "message_0245",
+              "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=83, events=opened,replied",
+              "score": 166.0
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0005"
+      ],
+      "message_id": "sample_msg_005",
+      "top_eight_ids": [
+        "message_0245",
+        "message_0005",
+        "message_0064",
+        "message_0063",
+        "message_0246",
+        "message_0394"
+      ],
+      "top_ranked_id": "message_0245",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 92,
+            "created_at": "2026-04-30 07:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "@u_004 are you coming today? If yes I'll keep one cab seat. If not, tell before 5 because booking final.",
+            "message_id": "message_0006",
+            "same_entity": true,
+            "same_type": true,
+            "score": 139.4118,
+            "text_jaccard": 0.1471
+          },
+          "message_id": "message_0006",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1471, age_days=92, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0006"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 92,
+            "created_at": "2026-04-30 07:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "@u_004 are you coming today? If yes I'll keep one cab seat. If not, tell before 5 because booking final.",
+            "message_id": "message_0006",
+            "same_entity": true,
+            "same_type": true,
+            "score": 139.4118,
+            "text_jaccard": 0.1471
+          },
+          "message_id": "message_0006",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0006"
+      ],
+      "message_id": "sample_msg_006",
+      "top_eight_ids": [
+        "message_0006",
+        "message_0250",
+        "message_0143",
+        "message_0144",
+        "message_0249",
+        "message_0117",
+        "message_0036",
+        "message_0118"
+      ],
+      "top_ranked_id": "message_0006",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 18,
+            "created_at": "2026-07-13 17:12",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "When did a trip last change something about how you see yourself?\n\nLadakh is built for that. 7 nights, all in, from Rs 17,999 per person.\n\nTap below to view the itinerary.\n\nReply STOP to unsubscribe from marketing messages.",
+            "message_id": "message_0272",
+            "same_entity": true,
+            "same_type": true,
+            "score": 162.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0272",
+          "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=18, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0272"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 82,
+            "created_at": "2026-05-10 12:46",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "When did a trip last change something about how you see yourself?\n\nLadakh is built for that. 7 nights, all in, from Rs 17,999 per person.\n\nTap below to view the itinerary.\n\nReply STOP to unsubscribe from marketing messages.",
+            "message_id": "message_0007",
+            "same_entity": true,
+            "same_type": true,
+            "score": 160.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0007",
+          "outranked_by": [
+            {
+              "message_id": "message_0272",
+              "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=18, events=opened",
+              "score": 162.0
+            },
+            {
+              "message_id": "message_0033",
+              "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=59, events=opened",
+              "score": 161.0
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0007"
+      ],
+      "message_id": "sample_msg_007",
+      "top_eight_ids": [
+        "message_0272",
+        "message_0033",
+        "message_0007",
+        "message_0109",
+        "message_0110",
+        "message_0021",
+        "message_0022",
+        "message_0273"
+      ],
+      "top_ranked_id": "message_0272",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 71,
+            "created_at": "2026-05-20 17:52",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Cultural night sheet is open. Add flat no + item by Sunday. Pls don't flood group with 'done'.",
+            "message_id": "message_0008",
+            "same_entity": true,
+            "same_type": true,
+            "score": 139.2308,
+            "text_jaccard": 0.3077
+          },
+          "message_id": "message_0008",
+          "relation": "same_entity=True, same_type=True, jaccard=0.3077, age_days=71, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0008"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 71,
+            "created_at": "2026-05-20 17:52",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Cultural night sheet is open. Add flat no + item by Sunday. Pls don't flood group with 'done'.",
+            "message_id": "message_0008",
+            "same_entity": true,
+            "same_type": true,
+            "score": 139.2308,
+            "text_jaccard": 0.3077
+          },
+          "message_id": "message_0008",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0008"
+      ],
+      "message_id": "sample_msg_008",
+      "top_eight_ids": [
+        "message_0008"
+      ],
+      "top_ranked_id": "message_0008",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 62,
+            "created_at": "2026-05-30 07:57",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Good morning family, have a peaceful day.",
+            "message_id": "message_0009",
+            "same_entity": true,
+            "same_type": true,
+            "score": 133.6,
+            "text_jaccard": 0.12
+          },
+          "message_id": "message_0009",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1200, age_days=62, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0009"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 62,
+            "created_at": "2026-05-30 07:57",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Good morning family, have a peaceful day.",
+            "message_id": "message_0009",
+            "same_entity": true,
+            "same_type": true,
+            "score": 133.6,
+            "text_jaccard": 0.12
+          },
+          "message_id": "message_0009",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0009"
+      ],
+      "message_id": "sample_msg_009",
+      "top_eight_ids": [
+        "message_0009",
+        "message_0132",
+        "message_0131",
+        "message_0081",
+        "message_0082",
+        "message_0343"
+      ],
+      "top_ranked_id": "message_0009",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 52,
+            "created_at": "2026-06-09 12:03",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Match thread tonight? I'll put poll after dinner, join if watching.",
+            "message_id": "message_0010",
+            "same_entity": true,
+            "same_type": true,
+            "score": 141.0,
+            "text_jaccard": 0.3333
+          },
+          "message_id": "message_0010",
+          "relation": "same_entity=True, same_type=True, jaccard=0.3333, age_days=52, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0010"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 52,
+            "created_at": "2026-06-09 12:03",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Match thread tonight? I'll put poll after dinner, join if watching.",
+            "message_id": "message_0010",
+            "same_entity": true,
+            "same_type": true,
+            "score": 141.0,
+            "text_jaccard": 0.3333
+          },
+          "message_id": "message_0010",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0010"
+      ],
+      "message_id": "sample_msg_010",
+      "top_eight_ids": [
+        "message_0010",
+        "message_0038",
+        "message_0316"
+      ],
+      "top_ranked_id": "message_0010",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 75,
+            "created_at": "2026-05-17 17:08",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Thank you for choosing PVR Cinemas,\n\nWe would love to hear about your experience with us.\n\nPlease click the link to give your valuable feedback.",
+            "message_id": "message_0011",
+            "same_entity": true,
+            "same_type": true,
+            "score": 160.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0011",
+          "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=75, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0011"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 75,
+            "created_at": "2026-05-17 17:08",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Thank you for choosing PVR Cinemas,\n\nWe would love to hear about your experience with us.\n\nPlease click the link to give your valuable feedback.",
+            "message_id": "message_0011",
+            "same_entity": true,
+            "same_type": true,
+            "score": 160.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0011",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0011"
+      ],
+      "message_id": "sample_msg_011",
+      "top_eight_ids": [
+        "message_0011",
+        "message_0242",
+        "message_0075",
+        "message_0076",
+        "message_0243",
+        "message_0102",
+        "message_0101"
+      ],
+      "top_ranked_id": "message_0011",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 65,
+            "created_at": "2026-05-27 07:12",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Cycle helmet + pump + rear light available. Bought Dec, barely used. Pickup near Gate 1, DM for pics.",
+            "message_id": "message_0012",
+            "same_entity": true,
+            "same_type": true,
+            "score": 136.4865,
+            "text_jaccard": 0.2162
+          },
+          "message_id": "message_0012",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2162, age_days=65, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0012"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 65,
+            "created_at": "2026-05-27 07:12",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Cycle helmet + pump + rear light available. Bought Dec, barely used. Pickup near Gate 1, DM for pics.",
+            "message_id": "message_0012",
+            "same_entity": true,
+            "same_type": true,
+            "score": 136.4865,
+            "text_jaccard": 0.2162
+          },
+          "message_id": "message_0012",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0012"
+      ],
+      "message_id": "sample_msg_012",
+      "top_eight_ids": [
+        "message_0012",
+        "message_0313"
+      ],
+      "top_ranked_id": "message_0012",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 26,
+            "created_at": "2026-07-04 17:46",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Good morning all. May today bring success and peace. Share positivity with friends.",
+            "message_id": "message_0077",
+            "same_entity": true,
+            "same_type": true,
+            "score": 149.6667,
+            "text_jaccard": 0.2222
+          },
+          "message_id": "message_0077",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2222, age_days=26, events=dismissed,muted_after_message"
+        }
+      ],
+      "chosen_ids": [
+        "message_0077"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 54,
+            "created_at": "2026-06-06 12:17",
+            "earlier": true,
+            "eligible_rank": 6,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Good morning. Have a blessed day.",
+            "message_id": "message_0013",
+            "same_entity": true,
+            "same_type": true,
+            "score": 144.6087,
+            "text_jaccard": 0.087
+          },
+          "message_id": "message_0013",
+          "outranked_by": [
+            {
+              "message_id": "message_0014",
+              "relation": "same_entity=True, same_type=True, jaccard=0.4000, age_days=44, events=dismissed,muted_after_message",
+              "score": 154.0
+            },
+            {
+              "message_id": "message_0077",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2222, age_days=26, events=dismissed,muted_after_message",
+              "score": 149.6667
+            },
+            {
+              "message_id": "message_0171",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2222, age_days=41, events=dismissed,muted_after_message",
+              "score": 148.6667
+            },
+            {
+              "message_id": "message_0123",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2222, age_days=113, events=dismissed,muted_after_message",
+              "score": 146.6667
+            },
+            {
+              "message_id": "message_0078",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0667, age_days=17, events=dismissed,muted_after_message",
+              "score": 145.0
+            }
+          ],
+          "status": "candidate"
+        },
+        {
+          "detail": {
+            "age_days": 44,
+            "created_at": "2026-06-16 17:24",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Good morning all, stay positive and keep smiling.",
+            "message_id": "message_0014",
+            "same_entity": true,
+            "same_type": true,
+            "score": 154.0,
+            "text_jaccard": 0.4
+          },
+          "message_id": "message_0014",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0013",
+        "message_0014"
+      ],
+      "message_id": "sample_msg_013",
+      "top_eight_ids": [
+        "message_0014",
+        "message_0077",
+        "message_0171",
+        "message_0123",
+        "message_0078",
+        "message_0013",
+        "message_0172",
+        "message_0241"
+      ],
+      "top_ranked_id": "message_0014",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 35,
+            "created_at": "2026-06-26 07:31",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Sharing this here: drink warm water every hour, avoid cold food. Share in family groups.",
+            "message_id": "message_0015",
+            "same_entity": false,
+            "same_type": true,
+            "score": 55.0,
+            "text_jaccard": 0.4333
+          },
+          "message_id": "message_0015",
+          "relation": "same_entity=False, same_type=True, jaccard=0.4333, age_days=35, events=dismissed,muted_after_message"
+        },
+        {
+          "detail": {
+            "age_days": 25,
+            "created_at": "2026-07-06 12:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Sharing this here: share in all groups before tonight. Don't ignore, very important.",
+            "message_id": "message_0016",
+            "same_entity": true,
+            "same_type": true,
+            "score": 147.1667,
+            "text_jaccard": 0.1389
+          },
+          "message_id": "message_0016",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1389, age_days=25, events=dismissed,muted_after_message"
+        }
+      ],
+      "chosen_ids": [
+        "message_0015",
+        "message_0016"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 35,
+            "created_at": "2026-06-26 07:31",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Sharing this here: drink warm water every hour, avoid cold food. Share in family groups.",
+            "message_id": "message_0015",
+            "same_entity": false,
+            "same_type": true,
+            "score": 55.0,
+            "text_jaccard": 0.4333
+          },
+          "message_id": "message_0015",
+          "outranked_by": [
+            {
+              "message_id": "message_0016",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1389, age_days=25, events=dismissed,muted_after_message",
+              "score": 147.1667
+            }
+          ],
+          "status": "candidate"
+        },
+        {
+          "detail": {
+            "age_days": 25,
+            "created_at": "2026-07-06 12:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Sharing this here: share in all groups before tonight. Don't ignore, very important.",
+            "message_id": "message_0016",
+            "same_entity": true,
+            "same_type": true,
+            "score": 147.1667,
+            "text_jaccard": 0.1389
+          },
+          "message_id": "message_0016",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0015",
+        "message_0016"
+      ],
+      "message_id": "sample_msg_014",
+      "top_eight_ids": [
+        "message_0016",
+        "message_0015",
+        "message_0181",
+        "message_0182",
+        "message_0255",
+        "message_0037",
+        "message_0051",
+        "message_0134"
+      ],
+      "top_ranked_id": "message_0016",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 14,
+            "created_at": "2026-07-16 17:46",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "New here? 50% Off Won't Wait!\n\nWelcome! Get 50% off with TRY50.\n\nBut hurry, it might expire soon.\n\nReady to place your first order? Use it now!\n\nT&C apply. Reply STOP to unsubscribe",
+            "message_id": "message_0017",
+            "same_entity": true,
+            "same_type": true,
+            "score": 173.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0017",
+          "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=14, events=dismissed,muted_after_message"
+        }
+      ],
+      "chosen_ids": [
+        "message_0017"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 14,
+            "created_at": "2026-07-16 17:46",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "New here? 50% Off Won't Wait!\n\nWelcome! Get 50% off with TRY50.\n\nBut hurry, it might expire soon.\n\nReady to place your first order? Use it now!\n\nT&C apply. Reply STOP to unsubscribe",
+            "message_id": "message_0017",
+            "same_entity": true,
+            "same_type": true,
+            "score": 173.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0017",
+          "outranked_by": [],
+          "status": "candidate"
+        },
+        {
+          "detail": {
+            "age_days": 143,
+            "created_at": "2026-03-10 07:52",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "New here? 50% Off Won't Wait!\n\nWelcome! Get 50% off with TRY50.\n\nBut hurry, it might expire soon.\n\nReady to place your first order? Use it now!\n\nT&C apply. Reply STOP to unsubscribe",
+            "message_id": "message_0018",
+            "same_entity": true,
+            "same_type": true,
+            "score": 169.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0018",
+          "outranked_by": [
+            {
+              "message_id": "message_0017",
+              "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=14, events=dismissed,muted_after_message",
+              "score": 173.0
+            },
+            {
+              "message_id": "message_0258",
+              "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=125, events=dismissed,muted_after_message",
+              "score": 169.0
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0017",
+        "message_0018"
+      ],
+      "message_id": "sample_msg_015",
+      "top_eight_ids": [
+        "message_0017",
+        "message_0258",
+        "message_0018",
+        "message_0084",
+        "message_0083",
+        "message_0112",
+        "message_0034",
+        "message_0402"
+      ],
+      "top_ranked_id": "message_0017",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 110,
+            "created_at": "2026-04-12 07:31",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 9,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "SECURITY: OTP risk found. Verify at account-login.in before access is blocked.",
+            "message_id": "message_0045",
+            "same_entity": true,
+            "same_type": true,
+            "score": 139.9091,
+            "text_jaccard": 0.3636
+          },
+          "message_id": "message_0045",
+          "relation": "same_entity=True, same_type=True, jaccard=0.3636, age_days=110, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0045"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 126,
+            "created_at": "2026-03-27 17:17",
+            "earlier": true,
+            "eligible_rank": 4,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 9,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "SECURITY: OTP risk found. Verify at account-login.in before access is blocked.",
+            "message_id": "message_0023",
+            "same_entity": true,
+            "same_type": true,
+            "score": 138.9091,
+            "text_jaccard": 0.3636
+          },
+          "message_id": "message_0023",
+          "outranked_by": [
+            {
+              "message_id": "message_0173",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0000, age_days=21, events=dismissed,muted_after_message",
+              "score": 143.0
+            },
+            {
+              "message_id": "message_0174",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0370, age_days=149, events=dismissed,muted_after_message",
+              "score": 140.1111
+            },
+            {
+              "message_id": "message_0045",
+              "relation": "same_entity=True, same_type=True, jaccard=0.3636, age_days=110, events=opened",
+              "score": 139.9091
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0023"
+      ],
+      "message_id": "sample_msg_019",
+      "top_eight_ids": [
+        "message_0173",
+        "message_0174",
+        "message_0045",
+        "message_0023",
+        "message_0053",
+        "message_0213",
+        "message_0214",
+        "message_0085"
+      ],
+      "top_ranked_id": "message_0173",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 116,
+            "created_at": "2026-04-06 07:24",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": true
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Support alert: password verification pending. Confirm password + OTP in 30 mins or account blocks.",
+            "message_id": "message_0024",
+            "same_entity": true,
+            "same_type": true,
+            "score": 159.5,
+            "text_jaccard": 0.25
+          },
+          "message_id": "message_0024",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2500, age_days=116, events=dismissed,muted_after_message,reported"
+        }
+      ],
+      "chosen_ids": [
+        "message_0024"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 116,
+            "created_at": "2026-04-06 07:24",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": true
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Support alert: password verification pending. Confirm password + OTP in 30 mins or account blocks.",
+            "message_id": "message_0024",
+            "same_entity": true,
+            "same_type": true,
+            "score": 159.5,
+            "text_jaccard": 0.25
+          },
+          "message_id": "message_0024",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0024"
+      ],
+      "message_id": "sample_msg_020",
+      "top_eight_ids": [
+        "message_0024",
+        "message_0087",
+        "message_0183",
+        "message_0201",
+        "message_0184",
+        "message_0088",
+        "message_0202",
+        "message_0147"
+      ],
+      "top_ranked_id": "message_0024",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 99,
+            "created_at": "2026-04-22 12:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Hey, just checking if you had dinner. No rush, call me whenever you are free.",
+            "message_id": "message_0046",
+            "same_entity": true,
+            "same_type": true,
+            "score": 132.0769,
+            "text_jaccard": 0.1026
+          },
+          "message_id": "message_0046",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1026, age_days=99, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0046"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 99,
+            "created_at": "2026-04-22 12:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Hey, just checking if you had dinner. No rush, call me whenever you are free.",
+            "message_id": "message_0046",
+            "same_entity": true,
+            "same_type": true,
+            "score": 132.0769,
+            "text_jaccard": 0.1026
+          },
+          "message_id": "message_0046",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0046"
+      ],
+      "message_id": "sample_msg_041",
+      "top_eight_ids": [
+        "message_0046",
+        "message_0310"
+      ],
+      "top_ranked_id": "message_0046",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": false,
+      "any_expected_in_top_eight": false,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 38,
+            "created_at": "2026-06-22 17:31",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Uploading festival pics here. Download your family ones when free, I may delete album Sunday.",
+            "message_id": "message_0035",
+            "same_entity": true,
+            "same_type": true,
+            "score": 131.0,
+            "text_jaccard": 0.0
+          },
+          "message_id": "message_0035",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0000, age_days=38, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0035"
+      ],
+      "diagnostic_cause": "A_retrieval",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 89,
+            "created_at": "2026-05-02 17:46",
+            "earlier": true,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [
+              "same conversation entity is false",
+              "text Jaccard 0.0625 is below 0.1500",
+              "same conversation type plus an event is false (same_type=False, has_event=True)"
+            ],
+            "filter_passed": false,
+            "history_text": "Dear Customer,\n\nYour health-related update is ready for review.\n\nPlease check appointment, prescription, claim, or pickup details in the registered app before the scheduled time.\n\nTeam Care Services",
+            "message_id": "message_0047",
+            "same_entity": false,
+            "same_type": false,
+            "score": 17.875,
+            "text_jaccard": 0.0625
+          },
+          "message_id": "message_0047",
+          "outranked_by": [],
+          "status": "filtered_out"
+        }
+      ],
+      "expected_ids": [
+        "message_0047"
+      ],
+      "message_id": "sample_msg_042",
+      "top_eight_ids": [
+        "message_0035",
+        "message_0322",
+        "message_0218",
+        "message_0397"
+      ],
+      "top_ranked_id": "message_0035",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 122,
+            "created_at": "2026-03-31 07:46",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": true
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Review in Progress\n\nDear User,\n\nYour approved application of INR 200000 has moved into the final stage.\n\nTap below for current status.\n\nRef ID-532311946\n\nReply STOP to unsubscribe",
+            "message_id": "message_0357",
+            "same_entity": true,
+            "same_type": true,
+            "score": 151.9375,
+            "text_jaccard": 0.0312
+          },
+          "message_id": "message_0357",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0312, age_days=122, events=dismissed,muted_after_message,reported"
+        }
+      ],
+      "chosen_ids": [
+        "message_0357"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 80,
+            "created_at": "2026-05-12 07:52",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Review in Progress\n\nDear User,\n\nYour approved application of INR 200000 has moved into the final stage.\n\nTap below for current status.\n\nRef ID-532311946\n\nReply STOP to unsubscribe",
+            "message_id": "message_0048",
+            "same_entity": true,
+            "same_type": true,
+            "score": 141.9375,
+            "text_jaccard": 0.0312
+          },
+          "message_id": "message_0048",
+          "outranked_by": [
+            {
+              "message_id": "message_0357",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0312, age_days=122, events=dismissed,muted_after_message,reported",
+              "score": 151.9375
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0048"
+      ],
+      "message_id": "sample_msg_043",
+      "top_eight_ids": [
+        "message_0357",
+        "message_0048",
+        "message_0220",
+        "message_0356"
+      ],
+      "top_ranked_id": "message_0357",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": false,
+      "any_expected_in_top_eight": false,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 89,
+            "created_at": "2026-05-02 17:08",
+            "earlier": true,
+            "eligible_rank": 8,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Photos attached for the kurta set. Pickup is near Gate 2, price is final.",
+            "message_id": "message_0401",
+            "same_entity": true,
+            "same_type": true,
+            "score": 132.4793,
+            "text_jaccard": 0.0826
+          },
+          "message_id": "message_0401",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0826, age_days=89, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0401"
+      ],
+      "diagnostic_cause": "A_retrieval",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 69,
+            "created_at": "2026-05-22 12:57",
+            "earlier": true,
+            "eligible_rank": 10,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Selling a denim jacket, size M. I can send close-up photos on DM and keep it aside till evening if pickup works.",
+            "message_id": "message_0049",
+            "same_entity": true,
+            "same_type": true,
+            "score": 130.8889,
+            "text_jaccard": 0.0296
+          },
+          "message_id": "message_0049",
+          "outranked_by": [
+            {
+              "message_id": "message_0095",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0556, age_days=17, events=dismissed,muted_after_message",
+              "score": 144.6667
+            },
+            {
+              "message_id": "message_0332",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0547, age_days=29, events=opened,replied",
+              "score": 139.6406
+            },
+            {
+              "message_id": "message_0096",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0156, age_days=146, events=dismissed,muted_after_message",
+              "score": 139.4688
+            },
+            {
+              "message_id": "message_0390",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0000, age_days=29, events=opened,replied",
+              "score": 138.0
+            },
+            {
+              "message_id": "message_0066",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0714, age_days=104, events=opened,replied",
+              "score": 137.1429
+            },
+            {
+              "message_id": "message_0065",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0226, age_days=80, events=opened,replied",
+              "score": 136.6767
+            },
+            {
+              "message_id": "message_0113",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0556, age_days=41, events=opened",
+              "score": 132.6667
+            },
+            {
+              "message_id": "message_0401",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0826, age_days=89, events=opened",
+              "score": 132.4793
+            },
+            {
+              "message_id": "message_0114",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0156, age_days=32, events=opened",
+              "score": 131.4688
+            }
+          ],
+          "status": "ranked_below_eight"
+        }
+      ],
+      "expected_ids": [
+        "message_0049"
+      ],
+      "message_id": "sample_msg_044",
+      "top_eight_ids": [
+        "message_0095",
+        "message_0332",
+        "message_0096",
+        "message_0390",
+        "message_0066",
+        "message_0065",
+        "message_0113",
+        "message_0401"
+      ],
+      "top_ranked_id": "message_0095",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 21,
+            "created_at": "2026-07-09 12:31",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Selling a barely used kurta set, size M. Pickup near Gate 2 this weekend, DM if interested.",
+            "message_id": "message_0115",
+            "same_entity": true,
+            "same_type": true,
+            "score": 144.6667,
+            "text_jaccard": 0.0556
+          },
+          "message_id": "message_0115",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0556, age_days=21, events=dismissed,muted_after_message"
+        }
+      ],
+      "chosen_ids": [
+        "message_0115"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 59,
+            "created_at": "2026-06-01 17:03",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Selling a denim jacket, size M. Pickup near Gate 2 today only. Message fast, two people already asked.",
+            "message_id": "message_0050",
+            "same_entity": true,
+            "same_type": true,
+            "score": 142.687,
+            "text_jaccard": 0.0229
+          },
+          "message_id": "message_0050",
+          "outranked_by": [
+            {
+              "message_id": "message_0025",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0077, age_days=105, events=dismissed,muted_after_message,reported",
+              "score": 152.2308
+            },
+            {
+              "message_id": "message_0115",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0556, age_days=21, events=dismissed,muted_after_message",
+              "score": 144.6667
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0050"
+      ],
+      "message_id": "sample_msg_045",
+      "top_eight_ids": [
+        "message_0025",
+        "message_0115",
+        "message_0050",
+        "message_0224",
+        "message_0335",
+        "message_0116"
+      ],
+      "top_ranked_id": "message_0025",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 70,
+            "created_at": "2026-05-22 12:17",
+            "earlier": true,
+            "eligible_rank": 4,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "School circular attached. Please check the timing and consent note before tomorrow morning.",
+            "message_id": "message_0403",
+            "same_entity": true,
+            "same_type": true,
+            "score": 137.8987,
+            "text_jaccard": 0.0633
+          },
+          "message_id": "message_0403",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0633, age_days=70, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0403"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 50,
+            "created_at": "2026-06-11 07:08",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Parents, the field-trip circular is attached. Please check pickup timing, consent form, and ID-card note before 6 PM.",
+            "message_id": "message_0051",
+            "same_entity": true,
+            "same_type": true,
+            "score": 139.4224,
+            "text_jaccard": 0.0807
+          },
+          "message_id": "message_0051",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0051"
+      ],
+      "message_id": "sample_msg_046",
+      "top_eight_ids": [
+        "message_0051",
+        "message_0037",
+        "message_0255",
+        "message_0403",
+        "message_0133",
+        "message_0134",
+        "message_0210",
+        "message_0209"
+      ],
+      "top_ranked_id": "message_0051",
+      "top_ranked_is_expected": true
+    },
+    {
+      "all_expected_in_top_eight": false,
+      "any_expected_in_top_eight": false,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 80,
+            "created_at": "2026-05-12 07:12",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Reminder: your account has a shopping offer available.\n\nSelected products and saved items may have extra discounts today.\n\nTap below to view current balance or offer details.\n\nReply STOP to unsubscribe",
+            "message_id": "message_0402",
+            "same_entity": true,
+            "same_type": true,
+            "score": 148.0588,
+            "text_jaccard": 0.2353
+          },
+          "message_id": "message_0402",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2353, age_days=80, events=dismissed,muted_after_message"
+        }
+      ],
+      "chosen_ids": [
+        "message_0402"
+      ],
+      "diagnostic_cause": "A_retrieval",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 40,
+            "created_at": "2026-06-21 12:12",
+            "earlier": true,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [
+              "same conversation entity is false",
+              "text Jaccard 0.0968 is below 0.1500",
+              "same conversation type plus an event is false (same_type=False, has_event=True)"
+            ],
+            "filter_passed": false,
+            "history_text": "Wallet cashback reminder: selected items in your cart have an extra benefit today. Reply STOP to unsubscribe.",
+            "message_id": "message_0052",
+            "same_entity": false,
+            "same_type": false,
+            "score": 24.9032,
+            "text_jaccard": 0.0968
+          },
+          "message_id": "message_0052",
+          "outranked_by": [],
+          "status": "filtered_out"
+        }
+      ],
+      "expected_ids": [
+        "message_0052"
+      ],
+      "message_id": "sample_msg_047",
+      "top_eight_ids": [
+        "message_0402",
+        "message_0257",
+        "message_0034",
+        "message_0017",
+        "message_0112",
+        "message_0188",
+        "message_0187",
+        "message_0111"
+      ],
+      "top_ranked_id": "message_0402",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": false,
+      "any_expected_in_top_eight": false,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 150,
+            "created_at": "2026-03-02 12:12",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Dear Customer,\n\nSafety advisory image attached. The brand says they never ask for OTP or payment details over calls.\n\nTap below to view details.",
+            "message_id": "message_0412",
+            "same_entity": true,
+            "same_type": true,
+            "score": 132.3659,
+            "text_jaccard": 0.1789
+          },
+          "message_id": "message_0412",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1789, age_days=150, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0412"
+      ],
+      "diagnostic_cause": "A_retrieval",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 29,
+            "created_at": "2026-07-01 17:17",
+            "earlier": true,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [
+              "same conversation entity is false",
+              "text Jaccard 0.0985 is below 0.1500",
+              "same conversation type plus an event is false (same_type=False, has_event=True)"
+            ],
+            "filter_passed": false,
+            "history_text": "Safety advisory: we never ask for OTP, card PIN, or payment details over calls. Report suspicious calls to the support email listed in the app.",
+            "message_id": "message_0053",
+            "same_entity": false,
+            "same_type": false,
+            "score": 14.9545,
+            "text_jaccard": 0.0985
+          },
+          "message_id": "message_0053",
+          "outranked_by": [],
+          "status": "filtered_out"
+        }
+      ],
+      "expected_ids": [
+        "message_0053"
+      ],
+      "message_id": "sample_msg_048",
+      "top_eight_ids": [
+        "message_0412",
+        "message_0263",
+        "message_0221",
+        "message_0264"
+      ],
+      "top_ranked_id": "message_0412",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": false,
+      "chosen_details": [],
+      "chosen_ids": [],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [],
+      "expected_ids": [],
+      "message_id": "sample_msg_049",
+      "top_eight_ids": [],
+      "top_ranked_id": null,
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 20,
+            "created_at": "2026-07-11 07:24",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Did you have dinner? Call tomorrow when you are free, no hurry.",
+            "message_id": "message_0054",
+            "same_entity": true,
+            "same_type": true,
+            "score": 135.3333,
+            "text_jaccard": 0.1111
+          },
+          "message_id": "message_0054",
+          "relation": "same_entity=True, same_type=True, jaccard=0.1111, age_days=20, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0054"
+      ],
+      "diagnostic_cause": "exact",
+      "exact_set_match": true,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 20,
+            "created_at": "2026-07-11 07:24",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 120,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Did you have dinner? Call tomorrow when you are free, no hurry.",
+            "message_id": "message_0054",
+            "same_entity": true,
+            "same_type": true,
+            "score": 135.3333,
+            "text_jaccard": 0.1111
+          },
+          "message_id": "message_0054",
+          "outranked_by": [
+            {
+              "message_id": "message_0359",
+              "relation": "same_entity=True, same_type=True, jaccard=0.1212, age_days=101, events=opened,replied",
+              "score": 138.6364
+            },
+            {
+              "message_id": "message_0226",
+              "relation": "same_entity=True, same_type=True, jaccard=0.0625, age_days=70, events=opened,replied",
+              "score": 137.875
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0054"
+      ],
+      "message_id": "sample_msg_050",
+      "top_eight_ids": [
+        "message_0359",
+        "message_0226",
+        "message_0054",
+        "message_0225",
+        "message_0167",
+        "message_0168",
+        "message_0361",
+        "message_0360"
+      ],
+      "top_ranked_id": "message_0359",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 50,
+            "created_at": "2026-06-11 07:52",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Can you look at the worker once? Retries are piling up again and escalation starts in 20 minutes.",
+            "message_id": "message_0228",
+            "same_entity": true,
+            "same_type": true,
+            "score": 145.1818,
+            "text_jaccard": 0.2727
+          },
+          "message_id": "message_0228",
+          "relation": "same_entity=True, same_type=True, jaccard=0.2727, age_days=50, events=opened,replied"
+        }
+      ],
+      "chosen_ids": [
+        "message_0228"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 43,
+            "created_at": "2026-06-18 12:31",
+            "earlier": true,
+            "eligible_rank": 3,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 2,
+              "replied": true,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Can you stay near laptop for the release window? Need quick replies if anything breaks.",
+            "message_id": "message_0055",
+            "same_entity": true,
+            "same_type": true,
+            "score": 142.4545,
+            "text_jaccard": 0.1818
+          },
+          "message_id": "message_0055",
+          "outranked_by": [
+            {
+              "message_id": "message_0228",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2727, age_days=50, events=opened,replied",
+              "score": 145.1818
+            },
+            {
+              "message_id": "message_0362",
+              "relation": "same_entity=True, same_type=True, jaccard=0.2571, age_days=71, events=opened,replied",
+              "score": 143.7143
+            }
+          ],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0055"
+      ],
+      "message_id": "sample_msg_051",
+      "top_eight_ids": [
+        "message_0228",
+        "message_0362",
+        "message_0055",
+        "message_0227",
+        "message_0249",
+        "message_0117",
+        "message_0118",
+        "message_0363"
+      ],
+      "top_ranked_id": "message_0228",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": false,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 120,
+            "created_at": "2026-04-01 12:52",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": true
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Your workspace access will expire today. Reply with the 6 digit login code you just received so we can keep your account active.",
+            "message_id": "message_0238",
+            "same_entity": true,
+            "same_type": true,
+            "score": 181.0,
+            "text_jaccard": 1.0
+          },
+          "message_id": "message_0238",
+          "relation": "same_entity=True, same_type=True, jaccard=1.0000, age_days=120, events=dismissed,muted_after_message,reported"
+        },
+        {
+          "detail": {
+            "age_days": 86,
+            "created_at": "2026-05-06 07:08",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": true,
+              "muted_after_message": true,
+              "opened": false,
+              "reaction_time_minutes": null,
+              "replied": false,
+              "reported": true
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Firewall profile update pending. Verify your admin password here to continue.",
+            "message_id": "message_0381",
+            "same_entity": true,
+            "same_type": true,
+            "score": 153.9677,
+            "text_jaccard": 0.0323
+          },
+          "message_id": "message_0381",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0323, age_days=86, events=dismissed,muted_after_message,reported"
+        }
+      ],
+      "chosen_ids": [
+        "message_0238",
+        "message_0381"
+      ],
+      "diagnostic_cause": "no_expected_evidence",
+      "exact_set_match": false,
+      "expected_details": [],
+      "expected_ids": [],
+      "message_id": "sample_msg_052",
+      "top_eight_ids": [
+        "message_0238",
+        "message_0381",
+        "message_0380"
+      ],
+      "top_ranked_id": "message_0238",
+      "top_ranked_is_expected": false
+    },
+    {
+      "all_expected_in_top_eight": true,
+      "any_expected_in_top_eight": true,
+      "chosen_details": [
+        {
+          "detail": {
+            "age_days": 35,
+            "created_at": "2026-06-26 07:57",
+            "earlier": true,
+            "eligible_rank": 2,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 9,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "OTP leak ho gaya hai. Account bachane ke liye verification code abhi batao.",
+            "message_id": "message_0369",
+            "same_entity": true,
+            "same_type": true,
+            "score": 132.7143,
+            "text_jaccard": 0.0571
+          },
+          "message_id": "message_0369",
+          "relation": "same_entity=True, same_type=True, jaccard=0.0571, age_days=35, events=opened"
+        }
+      ],
+      "chosen_ids": [
+        "message_0369"
+      ],
+      "diagnostic_cause": "B_model_selection",
+      "exact_set_match": false,
+      "expected_details": [
+        {
+          "detail": {
+            "age_days": 32,
+            "created_at": "2026-06-28 17:39",
+            "earlier": true,
+            "eligible_rank": 1,
+            "event": {
+              "dismissed": false,
+              "muted_after_message": false,
+              "opened": true,
+              "reaction_time_minutes": 9,
+              "replied": false,
+              "reported": false
+            },
+            "filter_failure_reasons": [],
+            "filter_passed": true,
+            "history_text": "Wallet KYC incomplete. Open link and confirm card number, PIN and OTP to continue payments.",
+            "message_id": "message_0056",
+            "same_entity": true,
+            "same_type": true,
+            "score": 135.5455,
+            "text_jaccard": 0.1515
+          },
+          "message_id": "message_0056",
+          "outranked_by": [],
+          "status": "candidate"
+        }
+      ],
+      "expected_ids": [
+        "message_0056"
+      ],
+      "message_id": "sample_msg_053",
+      "top_eight_ids": [
+        "message_0056",
+        "message_0369",
+        "message_0235",
+        "message_0173",
+        "message_0174",
+        "message_0213",
+        "message_0053",
+        "message_0214"
+      ],
+      "top_ranked_id": "message_0056",
+      "top_ranked_is_expected": true
+    }
+  ],
+  "summary": {
+    "api_calls": 0,
+    "expected_id_presence": {
+      "expected_ids_total": 31,
+      "filtered_out": 3,
+      "not_in_same_user_history": 0,
+      "present_in_top_eight": 27,
+      "ranked_below_eight": 1
+    },
+    "nonexact_evidence_cause": {
+      "A_retrieval": 4,
+      "B_model_selection": 12
+    },
+    "present_expected_id_rank_buckets": {
+      "fifth_to_eighth": 2,
+      "first": 13,
+      "second_to_fourth": 12
+    },
+    "retrieval_implementation_match": true,
+    "sample_presence": {
+      "all_expected_ids_present": 24,
+      "no_expected_ids_present": 4,
+      "some_but_not_all_expected_ids_present": 0
+    },
+    "samples_expected_none": 2,
+    "samples_total": 30,
+    "samples_with_expected_evidence": 28,
+    "top_ranked_is_expected": {
+      "count": 13,
+      "denominator_with_expected_evidence": 28
+    }
+  }
+}

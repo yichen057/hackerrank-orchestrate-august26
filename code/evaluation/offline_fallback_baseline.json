@@ -1,0 +1,643 @@
+{
+  "all_results": [
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0001"
+        ],
+        "message_type": "urgent"
+      },
+      "message_id": "sample_msg_001",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0002"
+        ],
+        "message_type": "event"
+      },
+      "message_id": "sample_msg_002",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0003"
+        ],
+        "message_type": "urgent"
+      },
+      "message_id": "sample_msg_003",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0004"
+        ],
+        "message_type": "business_update"
+      },
+      "message_id": "sample_msg_004",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0005"
+        ],
+        "message_type": "event"
+      },
+      "message_id": "sample_msg_005",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0006"
+        ],
+        "message_type": "personal"
+      },
+      "message_id": "sample_msg_006",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0007"
+        ],
+        "message_type": "promotion"
+      },
+      "message_id": "sample_msg_007",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0008"
+        ],
+        "message_type": "event"
+      },
+      "message_id": "sample_msg_008",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0009"
+        ],
+        "message_type": "greeting"
+      },
+      "message_id": "sample_msg_009",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0010"
+        ],
+        "message_type": "personal"
+      },
+      "message_id": "sample_msg_010",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0011"
+        ],
+        "message_type": "business_update"
+      },
+      "message_id": "sample_msg_011",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0012"
+        ],
+        "message_type": "promotion"
+      },
+      "message_id": "sample_msg_012",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0013",
+          "message_0014"
+        ],
+        "message_type": "greeting"
+      },
+      "message_id": "sample_msg_013",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0015",
+          "message_0016"
+        ],
+        "message_type": "forward"
+      },
+      "message_id": "sample_msg_014",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0017",
+          "message_0018"
+        ],
+        "message_type": "promotion"
+      },
+      "message_id": "sample_msg_015",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0023"
+        ],
+        "message_type": "scam"
+      },
+      "message_id": "sample_msg_019",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0024"
+        ],
+        "message_type": "scam"
+      },
+      "message_id": "sample_msg_020",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0046"
+        ],
+        "message_type": "personal"
+      },
+      "message_id": "sample_msg_041",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0047"
+        ],
+        "message_type": "urgent"
+      },
+      "message_id": "sample_msg_042",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0048"
+        ],
+        "message_type": "spam"
+      },
+      "message_id": "sample_msg_043",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0049"
+        ],
+        "message_type": "promotion"
+      },
+      "message_id": "sample_msg_044",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0050"
+        ],
+        "message_type": "promotion"
+      },
+      "message_id": "sample_msg_045",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0051"
+        ],
+        "message_type": "event"
+      },
+      "message_id": "sample_msg_046",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0052"
+        ],
+        "message_type": "promotion"
+      },
+      "message_id": "sample_msg_047",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0053"
+        ],
+        "message_type": "business_update"
+      },
+      "message_id": "sample_msg_048",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": true,
+      "evidence_exact": true,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [],
+        "message_type": "unknown"
+      },
+      "message_id": "sample_msg_049",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": true,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "digest",
+        "evidence_message_ids": [
+          "message_0054"
+        ],
+        "message_type": "personal"
+      },
+      "message_id": "sample_msg_050",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "notify",
+        "evidence_message_ids": [
+          "message_0055"
+        ],
+        "message_type": "urgent"
+      },
+      "message_id": "sample_msg_051",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": true,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [],
+        "message_type": "scam"
+      },
+      "message_id": "sample_msg_052",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    },
+    {
+      "action_correct": false,
+      "both_correct": false,
+      "evidence_exact": false,
+      "expected": {
+        "action": "mute",
+        "evidence_message_ids": [
+          "message_0056"
+        ],
+        "message_type": "scam"
+      },
+      "message_id": "sample_msg_053",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.2,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "Model unavailable; saved for later review."
+      }
+    }
+  ],
+  "summary": {
+    "action_accuracy": 11,
+    "api_calls": 0,
+    "both_correct": 1,
+    "configuration": "forced-offline-conservative-fallback",
+    "elapsed_seconds": 0.012,
+    "evidence_exact": 2,
+    "message_type_accuracy": 1,
+    "rows": 30
+  }
+}

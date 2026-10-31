@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+code/.cache/
+code/evaluation/.cache/
+.env
+.env.*
+
+# Local handoff, interview, and duplicate-workspace material.
+/HANDOFF.md
+/INTERVIEW_QA.md
+/code 2/
+
+# Submission archives are generated artifacts. Publish source files instead.
+/code.zip

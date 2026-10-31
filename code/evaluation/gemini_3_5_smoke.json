@@ -1,0 +1,67 @@
+{
+  "api_stats": {
+    "audio_calls": 1,
+    "backoff_seconds": 0.0,
+    "configured_min_interval_seconds": 2.0,
+    "final_min_interval_seconds": 2.0,
+    "http_requests": 3,
+    "image_calls": 1,
+    "interval_increases": 0,
+    "interval_reductions": 0,
+    "logical_calls": 3,
+    "pacing_seconds": 0.0,
+    "routing_calls": 1,
+    "transport_retries": 0
+  },
+  "configuration": {
+    "cache_dir": "code/evaluation/.cache/gemini_3_5_smoke",
+    "maximum_http_attempts_per_call": 1,
+    "model": "gemini-3.5-flash"
+  },
+  "elapsed_seconds": 28.117,
+  "image": {
+    "exact_content_match": false,
+    "fallback_characters": 1322,
+    "fallback_content": "Based on the image provided, here is the extracted content for the notification router:\n\n### **Sender & Brand**\n* **Sender/Brand:** PVR INOX\n* **Promoted Formats:** 4DX and MX4D (Motion EFX Theatre)\n\n### **Offer Details & Amounts**\n* **Promotion:** Movie tickets starting at an \"unbeatable price.\"\n* **Price:** Tickets starting at **₹199** (Indian Rupees).\n\n### **Key Dates & Deadlines**\n* **Offer Validity:** Only on **21st July 2026** (21st Jul'26).\n* **Movie Release Date (on poster):** 17.07.26 (17th July 2026).\n\n### **Featured Content (Movie Poster)**\n* **Movie Title:** *The Odyssey*\n* **Director:** Christopher Nolan (\"A Film by Christopher Nolan\")\n* **Format Note on Poster:** \"Shot entirely with IMAX film cameras\"\n* **Visuals:** An ancient warrior in armor (with a red-crested helmet) standing in front of a large, fiery silhouette of a horse (resembling the Trojan Horse).\n\n### **Call to Action & Links**\n* **Action:** \"For bookings visit PVR or INOX website / app\"\n\n### **Terms & Conditions**\n* \"*Offer applicable in select cities, cinemas & shows. Other T&C apply.\"\n\n### **Urgency & Safety Concerns**\n* **Urgency:** High, as the promotional price is advertised as valid for one day only (\"ONLY ON 21ST JUL'26\").\n* **Safety Concerns:** None. This is a standard promotional advertisement for a movie screening.",
+    "fallback_error": null,
+    "fallback_status": "ok",
+    "media_id": "img_002",
+    "primary_characters": 1171,
+    "primary_content": "**Message Overview & Content Description:**\n\nThis image is a promotional advertisement from the cinema chain **PVR INOX** offering discounted movie tickets for 4DX and MX4D formats.\n\n### **Key Details:**\n\n* **Sender / Brand:** PVR INOX\n* **Formats Featured:** 4DX, MX4D (Motion EFX Experience)\n* **Featured Movie:** *The Odyssey* (\"A Film by Christopher Nolan\", shot entirely with IMAX film cameras).\n* **Offer Price:** Tickets starting at **₹199**\n* **Offer Date / Urgency:** \"ONLY ON 21ST JUL'26\"\n* **Movie Release Date (on poster):** 17.07.26\n* **Call to Action / Links:** \"FOR BOOKINGS VISIT PVR OR INOX WEBSITE / APP\"\n* **Terms & Conditions:** \"*OFFER APPLICABLE IN SELECT CITIES, CINEMAS & SHOWS. OTHER T&C APPLY.\"\n\n### **Visual Context:**\n* Top section announces the offer in red and blue text over a light patterned background.\n* Center features an embedded movie poster showing a Greek-style warrior in front of a burning structure (resembling a giant horse/Trojan horse).\n* Bottom features the PVR INOX logo and booking instructions.\n\n### **Safety & Risk Assessment:**\n* No security risks or unauthorized instructions detected. Standard promotional movie offer.",
+    "primary_status": "ok"
+  },
+  "routing": {
+    "exact_decision_match": false,
+    "fallback_model_decision": {
+      "action": "notify",
+      "confidence": 0.86,
+      "evidence_message_ids": [
+        "message_0243"
+      ],
+      "message_type": "payment",
+      "reason": "Verified bank sent a card payment update that the user previously interacted with quickly."
+    },
+    "message_id": "msg_023",
+    "primary_model_decision": {
+      "action": "notify",
+      "confidence": 0.89,
+      "evidence_message_ids": [
+        "message_0243"
+      ],
+      "message_type": "business_update",
+      "reason": "The verified bank sent an important account update for an active account that warrants prompt user attention."
+    },
+    "status": "ok"
+  },
+  "voice": {
+    "exact_content_match": false,
+    "fallback_characters": 937,
+    "fallback_content": "**Transcription:**\n\n\"...cards in partnership with HDFC Bank, and you're among the first to be invited. These cards offer up to 10% cashback on every Swiggy, food and Instamart order. These cards also offer up to 24% off on travel. The best part, we're offering them to you free for lifetime to be the first to own the new Swiggy card, press one now.\"\n\n**Key Information Extracted:**\n\n*   **Brands/Names Mentioned:** HDFC Bank, Swiggy, Instamart.\n*   **Offers/Amounts:** \n    *   Up to 10% cashback on Swiggy food and Instamart orders.\n    *   Up to 24% off on travel.\n    *   \"Free for lifetime\" Swiggy credit card.\n*   **Call to Action:** Press \"1\" now to accept the offer.\n*   **Urgency:** High (requires immediate action to press a button).\n*   **Safety Concerns:** This is an automated promotional robocall or potential voice phishing (vishing) attempt soliciting immediate user interaction (\"press one now\") for a financial product.",
+    "fallback_error": null,
+    "fallback_status": "ok",
+    "media_id": "vn_007",
+    "primary_characters": 879,
+    "primary_content": "**Transcription:**\n\n> \"...credit cards in partnership with HDFC Bank, and you're among the first to be invited. These cards offer up to 10% cashback on every Swiggy, food, and Instamart order. These cards also offer up to 24% off on travel. The best part, we are offering them to you free for lifetime to be the first to own the new Swiggy card, press 1 now.\"\n\n---\n\n### Key Information Extracted:\n\n* **Names / Entities:** HDFC Bank, Swiggy, Instamart\n* **Amounts & Offers:** \n  * Up to 10% cashback on Swiggy food and Instamart orders\n  * Up to 24% off on travel\n  * Lifetime free credit card\n* **Call to Action / Urgency:** \"Press 1 now\" to claim the offer.\n* **Deadlines / Links:** None mentioned.\n* **Safety Concerns / Fraud Risk:** Automated telemarketing/robocall prompting an immediate keypress (\"press 1\") to sign up for a financial product.\n* **Non-speech Sounds:** None.",
+    "primary_status": "ok"
+  }
+}

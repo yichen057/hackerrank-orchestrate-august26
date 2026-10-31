@@ -1,0 +1,1262 @@
+{
+  "artifact_metadata": {
+    "configuration": "v5-diagnostic-not-submitted",
+    "prompt_version": "routing-v5-confidence-evidence-tiebreak"
+  },
+  "all_results": [
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.89,
+        "evidence_message_ids": [
+          "message_0001"
+        ],
+        "message_type": "urgent",
+        "reason": "A trusted group admin sent a time-sensitive update that should interrupt the user."
+      },
+      "message_id": "sample_msg_001",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0129"
+        ],
+        "message_type": "urgent",
+        "reason": "A society admin sent a time-sensitive update about water supply requiring immediate action."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0002"
+        ],
+        "message_type": "event",
+        "reason": "A school admin sent a same-day operational update that the user is likely to need immediately."
+      },
+      "failure_category": "category_boundary",
+      "message_id": "sample_msg_002",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0133"
+        ],
+        "message_type": "urgent",
+        "reason": "A trusted group admin sent a time-sensitive bus schedule update requiring immediate attention."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0003"
+        ],
+        "message_type": "urgent",
+        "reason": "The message is from a work context and contains a direct deadline or meeting dependency."
+      },
+      "message_id": "sample_msg_003",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.88,
+        "evidence_message_ids": [
+          "message_0170"
+        ],
+        "message_type": "urgent",
+        "reason": "A group admin tagged the user with an urgent schedule change and task request for today's review."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.91,
+        "evidence_message_ids": [
+          "message_0004"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified business is sending an update that matches the user's recent order history."
+      },
+      "failure_category": "priority_under_trigger",
+      "message_id": "sample_msg_004",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0239"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified e-commerce business sent a routine order update that does not require immediate action."
+      },
+      "true_signals": [
+        "business_verified",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.89,
+        "evidence_message_ids": [
+          "message_0005"
+        ],
+        "message_type": "event",
+        "reason": "A verified business is sending a reminder that matches the user's recent booking history."
+      },
+      "failure_category": "category_boundary",
+      "message_id": "sample_msg_005",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.88,
+        "evidence_message_ids": [
+          "message_0245"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified healthcare business sent an update regarding an upcoming appointment."
+      },
+      "true_signals": [
+        "business_verified",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0006"
+        ],
+        "message_type": "personal",
+        "reason": "The sender directly asks this user for a response or action."
+      },
+      "failure_category": "priority_under_trigger",
+      "message_id": "sample_msg_006",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0006"
+        ],
+        "message_type": "personal",
+        "reason": "A trusted group member sent a non-urgent personal request that can wait for the digest."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.78,
+        "evidence_message_ids": [
+          "message_0007"
+        ],
+        "message_type": "promotion",
+        "reason": "The message is promotional but matches a topic or business the user has opted into."
+      },
+      "message_id": "sample_msg_007",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0272"
+        ],
+        "message_type": "promotion",
+        "reason": "A verified travel business sent a promotional offer matching user interests, suitable for digest."
+      },
+      "true_signals": [
+        "business_verified",
+        "domain_mismatch"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0008"
+        ],
+        "message_type": "event",
+        "reason": "The message is useful group information, but it is not urgent enough to interrupt the user."
+      },
+      "message_id": "sample_msg_008",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0008"
+        ],
+        "message_type": "event",
+        "reason": "A society group admin sent a non-urgent event announcement that can be reviewed later at leisure."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.82,
+        "evidence_message_ids": [
+          "message_0009"
+        ],
+        "message_type": "greeting",
+        "reason": "The message is a harmless greeting that can be read later."
+      },
+      "message_id": "sample_msg_009",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0009"
+        ],
+        "message_type": "greeting",
+        "reason": "A family group member sent a friendly morning greeting that is safe but non-urgent."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.8,
+        "evidence_message_ids": [
+          "message_0010"
+        ],
+        "message_type": "personal",
+        "reason": "The message is safe casual chat with no urgent action required."
+      },
+      "message_id": "sample_msg_010",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0010"
+        ],
+        "message_type": "personal",
+        "reason": "A group member shared a non-urgent casual match thread message that can be read in the digest."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.78,
+        "evidence_message_ids": [
+          "message_0011"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified business is sending a legitimate but non-urgent update."
+      },
+      "message_id": "sample_msg_011",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0011"
+        ],
+        "message_type": "business_update",
+        "reason": "PVRINOX Cinemas sent a non-urgent feedback survey request that can be reviewed later in digest."
+      },
+      "true_signals": [
+        "business_verified",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0012"
+        ],
+        "message_type": "promotion",
+        "reason": "The offer is potentially relevant, but it does not need immediate attention."
+      },
+      "message_id": "sample_msg_012",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0012"
+        ],
+        "message_type": "promotion",
+        "reason": "A group member sent a non-urgent item sale post that can be reviewed later."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": true,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0013",
+          "message_0014"
+        ],
+        "message_type": "greeting",
+        "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores."
+      },
+      "failure_category": "category_boundary",
+      "message_id": "sample_msg_013",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0014"
+        ],
+        "message_type": "forward",
+        "reason": "The group member sent a forwarded greeting that matches previously muted repetitive messages."
+      },
+      "true_signals": [
+        "group_muted_by_user"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": true,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.83,
+        "evidence_message_ids": [
+          "message_0015",
+          "message_0016"
+        ],
+        "message_type": "forward",
+        "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores."
+      },
+      "message_id": "sample_msg_014",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0016"
+        ],
+        "message_type": "forward",
+        "reason": "The sender shared a chain forward that matches previously muted group messages."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": true,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.81,
+        "evidence_message_ids": [
+          "message_0017",
+          "message_0018"
+        ],
+        "message_type": "promotion",
+        "reason": "The user has opted out of or repeatedly dismissed similar marketing messages."
+      },
+      "message_id": "sample_msg_015",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.86,
+        "evidence_message_ids": [
+          "message_0017"
+        ],
+        "message_type": "promotion",
+        "reason": "The user opted out of promotional messages from Swish and repeatedly ignored similar offers."
+      },
+      "true_signals": [
+        "business_verified",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.81,
+        "evidence_message_ids": [
+          "message_0023"
+        ],
+        "message_type": "scam",
+        "reason": "The message asks for urgent OTP or account verification through a suspicious flow."
+      },
+      "message_id": "sample_msg_019",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0045"
+        ],
+        "message_type": "scam",
+        "reason": "The unverified group member uses fake security alerts and account blocking threats to push phishing links."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0024"
+        ],
+        "message_type": "scam",
+        "reason": "The message uses fake support language and account-blocking pressure to push the user into action."
+      },
+      "message_id": "sample_msg_020",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0024"
+        ],
+        "message_type": "scam",
+        "reason": "The group member requests password and OTP verification, indicating a scam attempt."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.82,
+        "evidence_message_ids": [
+          "message_0046"
+        ],
+        "message_type": "personal",
+        "reason": "The sender is trusted, but the message has no urgent action or safety relevance."
+      },
+      "message_id": "sample_msg_041",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0046"
+        ],
+        "message_type": "personal",
+        "reason": "A family member sent a casual voice message explicitly stating it is not urgent."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0047"
+        ],
+        "message_type": "urgent",
+        "reason": "A close contact sent a short urgent request that should interrupt the user."
+      },
+      "message_id": "sample_msg_042",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.89,
+        "evidence_message_ids": [
+          "message_0035"
+        ],
+        "message_type": "urgent",
+        "reason": "A family member sent an urgent voice message about a medical situation requiring an immediate call."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.81,
+        "evidence_message_ids": [
+          "message_0048"
+        ],
+        "message_type": "spam",
+        "reason": "The user has opted out of or repeatedly dismissed similar marketing messages."
+      },
+      "message_id": "sample_msg_043",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0357"
+        ],
+        "message_type": "spam",
+        "reason": "The user previously reported messages from this unverified sender with high user reports."
+      },
+      "true_signals": [
+        "domain_mismatch",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0049"
+        ],
+        "message_type": "promotion",
+        "reason": "The message matches the user's known interests but is still low priority."
+      },
+      "message_id": "sample_msg_044",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0332"
+        ],
+        "message_type": "promotion",
+        "reason": "A group member shared a marketplace listing that is relevant but not urgent."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0050"
+        ],
+        "message_type": "promotion",
+        "reason": "Similar historical messages were ignored, dismissed, or muted by this user."
+      },
+      "failure_category": "other_action_mismatch",
+      "message_id": "sample_msg_045",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0115"
+        ],
+        "message_type": "promotion",
+        "reason": "A group member posted item photos in a marketplace group, so it is placed in the digest."
+      },
+      "true_signals": [
+        "group_muted_by_user"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0051"
+        ],
+        "message_type": "event",
+        "reason": "A school admin sent a same-day operational update that the user is likely to need immediately."
+      },
+      "message_id": "sample_msg_046",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0403"
+        ],
+        "message_type": "event",
+        "reason": "A school group admin sent an important circular requiring parent action on consent and timing."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.81,
+        "evidence_message_ids": [
+          "message_0052"
+        ],
+        "message_type": "promotion",
+        "reason": "The user has opted out of or repeatedly dismissed similar marketing messages."
+      },
+      "message_id": "sample_msg_047",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0402"
+        ],
+        "message_type": "promotion",
+        "reason": "The user previously muted promotional offer reminders from this verified business."
+      },
+      "true_signals": [
+        "business_verified"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0053"
+        ],
+        "message_type": "business_update",
+        "reason": "The verified business message is legitimate but does not require immediate attention."
+      },
+      "message_id": "sample_msg_048",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0412"
+        ],
+        "message_type": "business_update",
+        "reason": "Verified business Hoop sent a non-urgent safety advisory that can be reviewed later."
+      },
+      "true_signals": [
+        "business_verified"
+      ]
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.82,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "The sender is unfamiliar, but the message does not show urgency, payment pressure, or safety risk."
+      },
+      "failure_category": "priority_over_trigger",
+      "message_id": "sample_msg_049",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.85,
+        "evidence_message_ids": [],
+        "message_type": "personal",
+        "reason": "An individual sender asks a direct question about event coordination that warrants a prompt reply."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.8,
+        "evidence_message_ids": [
+          "message_0054"
+        ],
+        "message_type": "personal",
+        "reason": "The sender is trusted, but the message has no urgent action or safety relevance."
+      },
+      "message_id": "sample_msg_050",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0054"
+        ],
+        "message_type": "personal",
+        "reason": "A trusted personal contact sent a non-urgent evening update that requires no immediate attention."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0055"
+        ],
+        "message_type": "urgent",
+        "reason": "The message is from a work context and contains a direct deadline or meeting dependency."
+      },
+      "message_id": "sample_msg_051",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0228"
+        ],
+        "message_type": "urgent",
+        "reason": "A trusted contact sent a time-sensitive request requiring quick response before an escalation."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.87,
+        "evidence_message_ids": [],
+        "message_type": "scam",
+        "reason": "This is the first message from the sender and it asks for sensitive verification or payment."
+      },
+      "message_id": "sample_msg_052",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.89,
+        "evidence_message_ids": [
+          "message_0238"
+        ],
+        "message_type": "scam",
+        "reason": "This untrusted sender requests a login code using phishing tactics previously reported by the user."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0056"
+        ],
+        "message_type": "scam",
+        "reason": "The message tries to instruct the router, but the routing decision should be based on the actual content and risk."
+      },
+      "message_id": "sample_msg_053",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.89,
+        "evidence_message_ids": [
+          "message_0056"
+        ],
+        "message_type": "scam",
+        "reason": "An untrusted contact is requesting sensitive OTP credentials under threat of payment suspension, indicating a scam."
+      },
+      "true_signals": []
+    }
+  ],
+  "mismatches": [
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0002"
+        ],
+        "message_type": "event",
+        "reason": "A school admin sent a same-day operational update that the user is likely to need immediately."
+      },
+      "failure_category": "category_boundary",
+      "message_id": "sample_msg_002",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0133"
+        ],
+        "message_type": "urgent",
+        "reason": "A trusted group admin sent a time-sensitive bus schedule update requiring immediate attention."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.91,
+        "evidence_message_ids": [
+          "message_0004"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified business is sending an update that matches the user's recent order history."
+      },
+      "failure_category": "priority_under_trigger",
+      "message_id": "sample_msg_004",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0239"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified e-commerce business sent a routine order update that does not require immediate action."
+      },
+      "true_signals": [
+        "business_verified",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.89,
+        "evidence_message_ids": [
+          "message_0005"
+        ],
+        "message_type": "event",
+        "reason": "A verified business is sending a reminder that matches the user's recent booking history."
+      },
+      "failure_category": "category_boundary",
+      "message_id": "sample_msg_005",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.88,
+        "evidence_message_ids": [
+          "message_0245"
+        ],
+        "message_type": "business_update",
+        "reason": "A verified healthcare business sent an update regarding an upcoming appointment."
+      },
+      "true_signals": [
+        "business_verified",
+        "promotions_opted_out"
+      ]
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "notify",
+        "confidence": 0.87,
+        "evidence_message_ids": [
+          "message_0006"
+        ],
+        "message_type": "personal",
+        "reason": "The sender directly asks this user for a response or action."
+      },
+      "failure_category": "priority_under_trigger",
+      "message_id": "sample_msg_006",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0006"
+        ],
+        "message_type": "personal",
+        "reason": "A trusted group member sent a non-urgent personal request that can wait for the digest."
+      },
+      "true_signals": []
+    },
+    {
+      "action_correct": true,
+      "evidence_exact": false,
+      "evidence_partial_overlap": true,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0013",
+          "message_0014"
+        ],
+        "message_type": "greeting",
+        "reason": "The sender has a pattern of repeated forwards or greetings that the user usually ignores."
+      },
+      "failure_category": "category_boundary",
+      "message_id": "sample_msg_013",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0014"
+        ],
+        "message_type": "forward",
+        "reason": "The group member sent a forwarded greeting that matches previously muted repetitive messages."
+      },
+      "true_signals": [
+        "group_muted_by_user"
+      ]
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": false,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "mute",
+        "confidence": 0.85,
+        "evidence_message_ids": [
+          "message_0050"
+        ],
+        "message_type": "promotion",
+        "reason": "Similar historical messages were ignored, dismissed, or muted by this user."
+      },
+      "failure_category": "other_action_mismatch",
+      "message_id": "sample_msg_045",
+      "message_type_correct": true,
+      "predicted": {
+        "action": "digest",
+        "confidence": 0.84,
+        "evidence_message_ids": [
+          "message_0115"
+        ],
+        "message_type": "promotion",
+        "reason": "A group member posted item photos in a marketplace group, so it is placed in the digest."
+      },
+      "true_signals": [
+        "group_muted_by_user"
+      ]
+    },
+    {
+      "action_correct": false,
+      "evidence_exact": true,
+      "evidence_partial_overlap": false,
+      "expected": {
+        "action": "digest",
+        "confidence": 0.82,
+        "evidence_message_ids": [],
+        "message_type": "unknown",
+        "reason": "The sender is unfamiliar, but the message does not show urgency, payment pressure, or safety risk."
+      },
+      "failure_category": "priority_over_trigger",
+      "message_id": "sample_msg_049",
+      "message_type_correct": false,
+      "predicted": {
+        "action": "notify",
+        "confidence": 0.85,
+        "evidence_message_ids": [],
+        "message_type": "personal",
+        "reason": "An individual sender asks a direct question about event coordination that warrants a prompt reply."
+      },
+      "true_signals": []
+    }
+  ],
+  "summary": {
+    "action_accuracy": {
+      "correct": 26,
+      "rate": 0.8667,
+      "total": 30
+    },
+    "action_confusion_matrix": {
+      "digest": {
+        "digest": 10,
+        "mute": 0,
+        "notify": 1
+      },
+      "mute": {
+        "digest": 1,
+        "mute": 9,
+        "notify": 0
+      },
+      "notify": {
+        "digest": 2,
+        "mute": 0,
+        "notify": 7
+      }
+    },
+    "cache_sources": {
+      "model": 30
+    },
+    "confidence": {
+      "expected_all": {
+        "count": 30,
+        "maximum": 0.91,
+        "mean": 0.8403,
+        "median": 0.84,
+        "minimum": 0.78
+      },
+      "predicted_all": {
+        "count": 30,
+        "maximum": 0.89,
+        "mean": 0.8583,
+        "median": 0.85,
+        "minimum": 0.84
+      },
+      "predicted_fully_correct": {
+        "count": 23,
+        "maximum": 0.89,
+        "mean": 0.86,
+        "median": 0.85,
+        "minimum": 0.84
+      },
+      "predicted_mismatched": {
+        "count": 7,
+        "maximum": 0.88,
+        "mean": 0.8529,
+        "median": 0.85,
+        "minimum": 0.84
+      }
+    },
+    "elapsed_seconds": 192.815,
+    "evaluation_mode": "leave-one-out",
+    "evidence": {
+      "exact": 11,
+      "no_overlap": 16,
+      "partial_overlap": 3
+    },
+    "failure_categories": {
+      "category_boundary": 3,
+      "other_action_mismatch": 1,
+      "priority_over_trigger": 1,
+      "priority_under_trigger": 2
+    },
+    "few_shot_examples_per_row": 29,
+    "message_type_accuracy": {
+      "correct": 26,
+      "rate": 0.8667,
+      "total": 30
+    },
+    "message_type_confusion_matrix": {
+      "business_update": {
+        "business_update": 3,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "event": {
+        "business_update": 1,
+        "event": 2,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 1
+      },
+      "forward": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 1,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "greeting": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 1,
+        "greeting": 1,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "payment": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "personal": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 4,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "promotion": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 6,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "scam": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 4,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "spam": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 1,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "unknown": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 1,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 0
+      },
+      "urgent": {
+        "business_update": 0,
+        "event": 0,
+        "forward": 0,
+        "greeting": 0,
+        "payment": 0,
+        "personal": 0,
+        "promotion": 0,
+        "scam": 0,
+        "spam": 0,
+        "unknown": 0,
+        "urgent": 4
+      }
+    },
+    "pipeline_stats": {
+      "decision_cache_hits": 0,
+      "fallback_decisions": 0,
+      "media_cache_hits": 8,
+      "media_unreadable": 0,
+      "model_decisions": 30,
+      "rows_requested": 30,
+      "validation_retries": 0
+    },
+    "promotion_or_business_update_predicted_as_safety": {},
+    "provider_stats": {
+      "audio_calls": 0,
+      "backoff_seconds": 0.0,
+      "configured_min_interval_seconds": 2.0,
+      "final_min_interval_seconds": 2.0,
+      "http_requests": 30,
+      "image_calls": 0,
+      "interval_increases": 0,
+      "interval_reductions": 0,
+      "logical_calls": 30,
+      "pacing_seconds": 0.0,
+      "routing_calls": 30,
+      "transport_retries": 0
+    },
+    "rows": 30
+  }
+}
