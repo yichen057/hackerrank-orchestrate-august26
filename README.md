@@ -1,12 +1,44 @@
 # Message Notification Router
 
-This submission routes every message in `dataset/messages.csv` to `notify`,
-`digest`, or `mute`. It supports text, image, and voice messages and writes the
-required predictions to `submission/output.csv`.
+[![tests](https://github.com/yichen057/hackerrank-orchestrate-august26/actions/workflows/tests.yml/badge.svg)](https://github.com/yichen057/hackerrank-orchestrate-august26/actions/workflows/tests.yml)
 
-The official task, field definitions, and allowed values are in
-[`problem_statement.md`](./problem_statement.md). The detailed system design is
-in [`docs/architecture.md`](./docs/architecture.md).
+Routes every message in a 110-row WhatsApp-style dataset to `notify`, `digest`, or
+`mute`, across text, images, and voice notes. Built in 24 hours for HackerRank
+Orchestrate, August 2026.
+
+**The design question is where the model's judgment is allowed to apply.** A
+deterministic pipeline prepares the evidence and enforces the output contract; the
+model only chooses among options the code has already narrowed. Its entire output is
+constrained by a per-request JSON Schema whose evidence field is an enum of exactly
+the message IDs retrieval selected, so a cited ID that was never offered is refused
+before it reaches application code.
+
+## At a glance
+
+| | |
+|---|---|
+| Action accuracy | `27/30` (90%) under leave-one-out, identical in both recorded runs |
+| Safety errors | `0` false mutes and `0` missed mutes in that evaluation, across 10 mute rows |
+| Fallback rows shipped | `0` of `110` |
+| Value of the model | removing it drops action accuracy to `11/30`, a gap of `+53.33` points |
+| Runtime dependencies | 4: `openai`, `pydantic`, `Pillow`, `av` |
+| Tests | 41, no API calls: `pip install -r requirements-dev.txt && python -m pytest tests/` |
+
+Message-type accuracy and evidence match move by a row between runs. [Evaluation](#evaluation)
+reports both runs side by side rather than the better one, and
+[Known limitations](#known-limitations) is deliberately not a short list.
+
+## Where to look
+
+| Path | What it holds |
+|---|---|
+| [`docs/architecture.md`](./docs/architecture.md) | the full design, stage by stage |
+| [`problem_statement.md`](./problem_statement.md) | the official task, fields, and allowed values |
+| `code/pipeline.py` | the single pass: prepare, decide, enforce |
+| `code/schemas.py` | the output contract and the candidate-set re-check |
+| `code/retrieval.py` | scoring a user's history down to the 8 candidates sent to the model |
+| `code/evaluation/main.py` | leave-one-out, with four guards against label leakage |
+| `tests/` | the invariants in the table above, executable |
 
 ## Public repository and licensing notice
 
