@@ -102,6 +102,6 @@ def validate_decision(payload: object, candidate_ids: list[str]) -> Decision:
 
 
 def validation_error_text(error: Exception) -> str:
-    if isinstance(error, ValidationError):
-        return error.json(include_url=False)
-    return str(error)
+    # Pydantic errors can include input values and user-supplied validator text.
+    # Do not echo either of them into another provider request.
+    return "invalid_decision" if isinstance(error, ValidationError) else "invalid_response"

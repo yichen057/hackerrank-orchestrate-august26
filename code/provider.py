@@ -11,14 +11,33 @@ import openai
 from openai import OpenAI
 
 from config import Config
+from errors import ERROR_CATEGORIES, ProviderFailure, safe_category
 from prompts import MEDIA_SYSTEM_PROMPT, UNTRUSTED_END, UNTRUSTED_START
 
 
 T = TypeVar("T")
 
 
-class ProviderFailure(RuntimeError):
-    pass
+def provider_error_category(error: Exception) -> str:
+    if isinstance(error, ProviderFailure):
+        return safe_category(error.category)
+    if isinstance(error, openai.APITimeoutError):
+        return "timeout"
+    if isinstance(error, openai.APIConnectionError):
+        return "connection_failed"
+    if isinstance(error, openai.APIStatusError):
+        status = error.status_code
+        if status == 429:
+            return "rate_limited"
+        if status in (401, 403):
+            return "auth_rejected"
+        if status == 408:
+            return "timeout"
+        if 400 <= status <= 499:
+            return "bad_request"
+        if 500 <= status <= 599:
+            return "server_error"
+    return "unknown"
 
 
 @dataclass
@@ -117,16 +136,10 @@ class GeminiProvider:
 
     @staticmethod
     def _retryable(error: Exception) -> tuple[bool, str]:
-        if isinstance(error, openai.RateLimitError):
-            return True, "HTTP 429"
-        if isinstance(error, openai.APIStatusError):
-            status = error.status_code
-            return (500 <= status <= 599), f"HTTP {status}"
-        if isinstance(error, openai.APITimeoutError):
-            return True, "timeout"
-        if isinstance(error, openai.APIConnectionError):
-            return True, "connection_error"
-        return False, type(error).__name__
+        category = provider_error_category(error)
+        return category in {
+            "rate_limited", "server_error", "timeout", "connection_failed"
+        }, category
 
     def _with_backoff(self, kind: str, operation: Callable[[], T]) -> T:
         self._pace()
@@ -147,10 +160,10 @@ class GeminiProvider:
                 return result
             except Exception as error:  # classified immediately below
                 retryable, label = self._retryable(error)
-                if label == "HTTP 429":
+                if label == "rate_limited":
                     print(
-                        f"TRANSPORT_ERROR_BODY kind={kind} attempt={attempt}/"
-                        f"{total_attempts} body={error}",
+                        f"TRANSPORT_ERROR kind={kind} attempt={attempt}/"
+                        f"{total_attempts} category={label}",
                         file=sys.stderr,
                         flush=True,
                     )
@@ -158,11 +171,9 @@ class GeminiProvider:
                 else:
                     self.consecutive_successes = 0
                 if not retryable:
-                    raise ProviderFailure(f"{label}: {error}") from error
+                    raise ProviderFailure(label) from None
                 if attempt == total_attempts:
-                    raise ProviderFailure(
-                        f"{label} exhausted after {attempt} attempts: {error}"
-                    ) from error
+                    raise ProviderFailure(label) from None
                 wait_seconds = self.RETRY_WAITS_SECONDS[attempt - 1]
                 self.stats.transport_retries += 1
                 self.stats.backoff_seconds += wait_seconds
@@ -198,11 +209,11 @@ class GeminiProvider:
         response = self._with_backoff("routing", request)
         content = response.choices[0].message.content
         if not content:
-            raise ProviderFailure("Gemini returned empty routing content")
+            raise ProviderFailure("empty_response")
         try:
             return json.loads(content)
         except json.JSONDecodeError as error:
-            raise ValueError(f"routing response is not valid JSON: {error}") from error
+            raise ValueError("invalid_response") from None
 
     def describe_image(self, file_name: str, media_bytes: bytes, mime_type: str) -> str:
         encoded = base64.b64encode(media_bytes).decode("ascii")
@@ -237,7 +248,7 @@ class GeminiProvider:
         response = self._with_backoff("image", request)
         content = response.choices[0].message.content
         if not content or not content.strip():
-            raise ProviderFailure("Gemini returned an empty image description")
+            raise ProviderFailure("empty_response")
         return content.strip()
 
     def transcribe_audio(self, file_name: str, media_bytes: bytes, audio_format: str) -> str:
@@ -274,5 +285,5 @@ class GeminiProvider:
         response = self._with_backoff("audio", request)
         content = response.choices[0].message.content
         if not content or not content.strip():
-            raise ProviderFailure("Gemini returned an empty audio transcript")
+            raise ProviderFailure("empty_response")
         return content.strip()

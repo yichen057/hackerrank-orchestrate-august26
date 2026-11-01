@@ -5,13 +5,16 @@ import json
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 from cache import CacheStore
 from config import Config
 from context import build_context
 from data_io import Dataset, write_output
 from fallback import conservative_fallback
-from media import CONVERSION_VERSION, PreparedMedia, prepare_audio, prepare_image
+from errors import local_error_category, safe_category
+if TYPE_CHECKING:
+    from media import PreparedMedia
 from prompts import (
     MEDIA_PROMPT_VERSION,
     PROMPT_VERSION,
@@ -95,6 +98,8 @@ class RouterPipeline:
         ).hexdigest()
 
     def _prepare(self, row: dict[str, str]) -> PreparedMedia | None:
+        from media import prepare_audio, prepare_image
+
         media_type = row.get("media_type", "")
         media_id = row.get("media_id", "")
         if not media_type:
@@ -111,6 +116,8 @@ class RouterPipeline:
         raise ValueError(f"Unsupported media_type: {media_type}")
 
     def _media_fingerprint(self, prepared: PreparedMedia) -> str:
+        from media import CONVERSION_VERSION
+
         value = {
             "source_sha256": prepared.source_sha256,
             "detected_format": prepared.detected_format,
@@ -160,7 +167,7 @@ class RouterPipeline:
                     **metadata,
                     "status": "unreadable",
                     "content": "",
-                    "error_category": str(error),
+                    "error_category": safe_category(error.category),
                 }
             self.cache.put_media(
                 prepared.media_id,
@@ -175,7 +182,7 @@ class RouterPipeline:
                 "source_file_name": None,
                 "status": "unreadable",
                 "content": "",
-                "error_category": f"{type(error).__name__}: {error}",
+                "error_category": local_error_category(error),
             }
 
     def render_text_prompt(self, message_id: str) -> tuple[str, str, dict]:

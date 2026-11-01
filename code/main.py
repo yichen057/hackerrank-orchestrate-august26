@@ -19,7 +19,7 @@ class ForcedOfflineProvider:
 
     @staticmethod
     def _blocked() -> None:
-        raise ProviderFailure("forced offline mode: API calls are disabled")
+        raise ProviderFailure("offline")
 
     def route(self, *_args, **_kwargs):
         self._blocked()

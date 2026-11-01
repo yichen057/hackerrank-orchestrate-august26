@@ -22,7 +22,7 @@ before it reaches application code.
 | Fallback rows shipped | `0` of `110` |
 | Value of the model | removing it drops action accuracy to `11/30`, a gap of `+53.33` points |
 | Runtime dependencies | 4: `openai`, `pydantic`, `Pillow`, `av` |
-| Tests | 41, no API calls: `pip install -r requirements-dev.txt && python -m pytest tests/` |
+| Tests | 65, no API calls: `pip install -r requirements-dev.txt && python -m pytest tests/` |
 
 Message-type accuracy and evidence match move by a row between runs. [Evaluation](#evaluation)
 reports both runs side by side rather than the better one, and
@@ -382,13 +382,17 @@ full dataset. Exact results and call counters are in
   `img_012` succeeded in an earlier run, then returned an empty description in
   a later run. The later run marked it unreadable and routed its message using
   the remaining text, metadata, and context.
-- **IDENTIFIED, NOT MITIGATED:** Raw provider exception strings are not
-  sanitized before they can be printed or stored as a media error category.
-  A credential-pattern scan of every shipped archive file and the shared
-  transcript found zero matches. That scan does not prove a future SDK or
-  custom endpoint can never reflect sensitive data in an exception. The
-  correct future fix is to log and cache only the classified status and safe
-  error category.
+- **POST-COMPETITION FIX, OFFLINE REGRESSION-TESTED:** Provider failures use
+  the closed vocabulary in `code/errors.py`, classified from SDK types and
+  HTTP status codes, never exception text. Media cache reads/writes normalize
+  legacy error fields; unreadable records carry no content. Transport logs
+  and correction prompts no longer echo exception text or Pydantic input
+  values. Tests inject fake secrets and local paths into failures and check
+  results, persisted cache records, correction prompts, and transport output.
+  These tests do not establish that arbitrary successful model content or all
+  third-party library logging is free of sensitive data. No live provider
+  requests were used to validate this fix; the frozen competition output is
+  unchanged.
 - **INTERPRETATION:** Solved examples are sent as compressed few-shot
   demonstrations containing their labels. No sample label is mapped to a
   target message, and no target label lookup or hardcoded target label exists.

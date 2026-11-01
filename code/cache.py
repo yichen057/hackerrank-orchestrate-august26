@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 from typing import Any
+from errors import safe_category
 
 
 class CacheStore:
@@ -49,9 +50,25 @@ class CacheStore:
 
     def get_media(self, media_id: str, fingerprint: str) -> dict[str, Any] | None:
         record = self._read(self.media / f"{media_id}.json")
+        if record and self.sanitize_media_record(record):
+            self.put_media(media_id, record)
         if not record or record.get("fingerprint") != fingerprint:
             return None
         return record
 
     def put_media(self, media_id: str, record: dict[str, Any]) -> None:
+        self.sanitize_media_record(record)
         self._write(self.media / f"{media_id}.json", record)
+
+    @staticmethod
+    def sanitize_media_record(record: dict[str, Any]) -> bool:
+        result = record.get("result")
+        if not isinstance(result, dict):
+            return False
+        before = result.copy()
+        if result.get("status") == "unreadable":
+            result["content"] = ""
+            result["error_category"] = safe_category(result.get("error_category"))
+        elif "error_category" in result:
+            result["error_category"] = safe_category(result["error_category"])
+        return result != before

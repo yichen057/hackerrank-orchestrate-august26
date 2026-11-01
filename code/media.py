@@ -8,6 +8,7 @@ import av
 from PIL import Image
 
 from cache import CacheStore
+from errors import ConversionFailure, UnsupportedMediaError
 
 
 CONVERSION_VERSION = "media-conversion-v1"
@@ -88,11 +89,14 @@ def prepare_image(media_id: str, path: Path, cache: CacheStore) -> PreparedMedia
         "AVIF": "image/avif",
     }
     if detected not in mime_map:
-        raise ValueError(f"Unsupported image format detected from content: {detected}")
+        raise UnsupportedMediaError("unsupported_media")
     if detected == "AVIF":
         target = cache.converted / f"{media_id}-{source_hash[:12]}.png"
         if not target.exists():
-            _convert_avif(path, target)
+            try:
+                _convert_avif(path, target)
+            except Exception:
+                raise ConversionFailure("conversion_failed") from None
         return PreparedMedia(
             media_id, "image", path, target, source_hash, detected,
             mime_map[detected], None, True
@@ -126,11 +130,12 @@ def prepare_audio(media_id: str, path: Path, cache: CacheStore) -> PreparedMedia
     if any(name in container_name for name in ("mov", "mp4", "m4a", "3gp", "mj2")):
         target = cache.converted / f"{media_id}-{source_hash[:12]}.wav"
         if not target.exists():
-            _convert_m4a_to_wav(path, target)
+            try:
+                _convert_m4a_to_wav(path, target)
+            except Exception:
+                raise ConversionFailure("conversion_failed") from None
         return PreparedMedia(
             media_id, "voice", path, target, source_hash, "M4A/MP4",
             "audio/mp4", "wav", True
         )
-    raise ValueError(
-        f"Unsupported audio format detected from content: container={container_name}, codec={codec_name}"
-    )
+    raise UnsupportedMediaError("unsupported_media")

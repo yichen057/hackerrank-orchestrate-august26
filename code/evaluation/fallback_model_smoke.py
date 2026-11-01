@@ -16,6 +16,7 @@ from cache import CacheStore  # noqa: E402
 from config import load_config  # noqa: E402
 from context import build_context  # noqa: E402
 from data_io import Dataset  # noqa: E402
+from errors import local_error_category  # noqa: E402
 from pipeline import RouterPipeline  # noqa: E402
 from prompts import SYSTEM_PROMPT, compressed_examples, routing_prompt  # noqa: E402
 from provider import GeminiProvider  # noqa: E402
@@ -110,7 +111,7 @@ def main() -> int:
         results["routing"] = {
             "status": "failed",
             "message_id": TEXT_MESSAGE_ID,
-            "error": f"{type(error).__name__}: {error}",
+            "error": local_error_category(error),
         }
         results["api_stats"] = provider.stats.to_dict()
         results["elapsed_seconds"] = round(time.perf_counter() - started, 3)
