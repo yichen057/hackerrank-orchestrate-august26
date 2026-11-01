@@ -138,7 +138,9 @@ def test_cache_write_normalizes_category_and_preserves_success(tmp_path):
 def test_pydantic_error_does_not_echo_input():
     with pytest.raises(ValueError) as caught:
         Decision.model_validate({"action": SECRET})
-    assert validation_error_text(caught.value) == "invalid_decision"
+    feedback = validation_error_text(caught.value)
+    assert "action: literal_error" in feedback
+    assert SECRET not in feedback
     assert validation_error_text(RuntimeError(SECRET)) == "invalid_response"
 
 

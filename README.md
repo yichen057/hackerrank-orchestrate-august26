@@ -22,7 +22,7 @@ before it reaches application code.
 | Fallback rows shipped | `0` of `110` |
 | Value of the model | removing it drops action accuracy to `11/30`, a gap of `+53.33` points |
 | Runtime dependencies | 4: `openai`, `pydantic`, `Pillow`, `av` |
-| Tests | 65, no API calls: `pip install -r requirements-dev.txt && python -m pytest tests/` |
+| Tests | 76, no API calls: `pip install -r requirements-dev.txt && python -m pytest tests/` |
 
 Message-type accuracy and evidence match move by a row between runs. [Evaluation](#evaluation)
 reports both runs side by side rather than the better one, and
@@ -387,7 +387,11 @@ full dataset. Exact results and call counters are in
   HTTP status codes, never exception text. Media cache reads/writes normalize
   legacy error fields; unreadable records carry no content. Transport logs
   and correction prompts no longer echo exception text or Pydantic input
-  values. Tests inject fake secrets and local paths into failures and check
+  values. Correction feedback includes only allowlisted schema fields/error
+  types and bounded numeric list indices, not raw `loc`, `type`, `input`, or
+  `msg` values. Mocked recovery tests exercise an invalid response followed by
+  a valid correction; they do not measure live-model recovery accuracy.
+  Tests inject fake secrets and local paths into failures and check
   results, persisted cache records, correction prompts, and transport output.
   These tests do not establish that arbitrary successful model content or all
   third-party library logging is free of sensitive data. No live provider

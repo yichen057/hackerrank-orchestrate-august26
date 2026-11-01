@@ -22,6 +22,19 @@ MESSAGE_TYPES = [
 ]
 SCHEMA_VERSION = "decision-v2-max-two-evidence"
 
+# Error locations and custom error codes can contain model-controlled strings.
+# Only this schema's known symbols may cross the correction-prompt boundary.
+FEEDBACK_ERROR_TYPES = frozenset({
+    "missing", "extra_forbidden", "literal_error", "too_long", "too_short",
+    "string_type", "string_too_long", "string_too_short", "list_type",
+    "float_type", "float_parsing", "finite_number", "greater_than_equal",
+    "less_than_equal", "value_error", "model_type", "model_attributes_type",
+})
+
+
+class EvidenceCandidateError(ValueError):
+    """A valid decision cites an ID outside the runtime candidate set."""
+
 
 class Decision(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -95,13 +108,34 @@ def validate_decision(payload: object, candidate_ids: list[str]) -> Decision:
         if message_id not in candidate_ids
     ]
     if invalid:
-        raise ValueError(
-            f"evidence_message_ids not in runtime candidate set: {invalid}"
-        )
+        raise EvidenceCandidateError("evidence_message_ids not in runtime candidate set")
     return decision
 
 
 def validation_error_text(error: Exception) -> str:
-    # Pydantic errors can include input values and user-supplied validator text.
-    # Do not echo either of them into another provider request.
-    return "invalid_decision" if isinstance(error, ValidationError) else "invalid_response"
+    if isinstance(error, EvidenceCandidateError):
+        return "evidence_message_ids: not_in_candidate_set"
+    if not isinstance(error, ValidationError):
+        return "invalid_response"
+
+    feedback: list[str] = []
+    for detail in error.errors(include_input=False, include_context=False, include_url=False)[:8]:
+        loc = detail.get("loc", ())
+        field = "decision"
+        if loc:
+            first = loc[0]
+            field = first if isinstance(first, str) and first in Decision.model_fields else "unknown_field"
+            # Require an exact int: bool subclasses int, but [True] must never
+            # become trusted feedback. Pydantic currently emits real int indices;
+            # retain this boundary check if the diagnostic source changes later.
+            if (
+                field == "evidence_message_ids" and len(loc) == 2
+                and type(loc[1]) is int and 0 <= loc[1] <= 10000
+            ):
+                field += f"[{loc[1]}]"
+        kind = detail.get("type")
+        kind = kind if kind in FEEDBACK_ERROR_TYPES else "invalid_value"
+        line = f"{field}: {kind}"
+        if line not in feedback:
+            feedback.append(line)
+    return "\n".join(feedback) or "invalid_decision"
